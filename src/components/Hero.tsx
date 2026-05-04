@@ -1,3 +1,4 @@
+import { CornerDownRight } from "lucide-react";
 import heroImg from "@/assets/hero-fallback.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
 import { WeatherBadge } from "./WeatherBadge";
@@ -24,30 +25,27 @@ export function Hero() {
         height={1080}
       />
 
-      {/* Dark cinematic overlay */}
-      <div className="absolute inset-0 bg-black/40" />
-      {/* Bottom vignette for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-      {/* Bottom-left headline */}
-      <div className="absolute bottom-0 left-0 z-10 p-8 md:p-14 lg:p-20">
-        <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-white/50">
-          Dandenong South — Est. 2005
-        </p>
-        <h1 className="text-5xl font-bold leading-[1.0] tracking-tight text-white md:text-7xl lg:text-8xl">
+      {/* Content — center-left */}
+      <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-24">
+        <h1 className="text-[clamp(3.5rem,8vw,7.5rem)] font-bold leading-[1.0] tracking-tight text-white">
           Where your car<br />gets it right.
         </h1>
-        <a
-          href="#book"
-          className="mt-8 inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white"
-        >
-          Book Appointment
-          <span className="block h-px w-8 bg-current" />
-        </a>
+
+        <div className="mt-8 flex items-start gap-3 max-w-sm md:max-w-md">
+          <CornerDownRight className="mt-0.5 h-4 w-4 shrink-0 text-white/50" />
+          <p className="text-sm leading-relaxed text-white/50">
+            Honest mechanics, transparent pricing and fast turnaround —
+            servicing Dandenong South and the South-East suburbs.
+          </p>
+        </div>
       </div>
 
       {/* Weather badge — bottom right */}
-      <div className="absolute bottom-8 right-8 z-10 md:bottom-14 md:right-14 lg:bottom-20 lg:right-20">
+      <div className="absolute bottom-8 right-8 z-10 md:bottom-12 md:right-12">
         <WeatherBadge />
       </div>
     </section>
