@@ -1,4 +1,5 @@
 import heroImg from "@/assets/hero-fallback.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import { WeatherBadge } from "./WeatherBadge";
 
 export function Hero() {
@@ -12,10 +13,7 @@ export function Hero() {
         poster={heroImg}
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source
-          src="https://cdn.coverr.co/videos/coverr-a-mechanic-fixing-a-car-engine-1572/1080p.mp4"
-          type="video/mp4"
-        />
+        <source src={heroVideo} type="video/mp4" />
       </video>
 
       <img
