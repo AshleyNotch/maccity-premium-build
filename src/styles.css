@@ -86,7 +86,7 @@
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 30px color-mix(in oklab, var(--primary) 60%, transparent);
+    text-shadow: none;
   }
   .bg-surface {
     background: var(--gradient-surface);
