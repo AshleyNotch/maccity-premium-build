@@ -95,7 +95,7 @@
     background: var(--gradient-hero);
   }
   .shadow-glow {
-    box-shadow: var(--shadow-glow);
+    box-shadow: none;
   }
   .shadow-card {
     box-shadow: var(--shadow-card);
