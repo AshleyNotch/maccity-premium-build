@@ -4,7 +4,7 @@ import { WeatherBadge } from "./WeatherBadge";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       <video
         autoPlay
         loop
@@ -24,36 +24,32 @@ export function Hero() {
         height={1080}
       />
 
-      {/* Light cinematic overlay — keeps background visible */}
-      <div className="absolute inset-0 bg-black/25" />
+      {/* Dark cinematic overlay */}
+      <div className="absolute inset-0 bg-black/40" />
       {/* Bottom vignette for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-      <WeatherBadge />
-
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center">
-        <span className="animate-fade-in text-xs font-medium uppercase tracking-[0.3em] text-foreground/80">
-          MacCity Auto Workshop
-        </span>
-        <h1 className="animate-fade-up mt-6 text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl lg:text-[5.5rem]">
-          Where your car <br /> gets it right.
-        </h1>
-        <p
-          className="animate-fade-up mt-6 max-w-xl text-base text-foreground/75 md:text-lg"
-          style={{ animationDelay: "0.15s" }}
-        >
-          Honest mechanics, transparent pricing and fast turnaround — servicing
-          Dandenong South and the South-East suburbs.
+      {/* Bottom-left headline */}
+      <div className="absolute bottom-0 left-0 z-10 p-8 md:p-14 lg:p-20">
+        <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-white/50">
+          Dandenong South — Est. 2005
         </p>
+        <h1 className="text-5xl font-bold leading-[1.0] tracking-tight text-white md:text-7xl lg:text-8xl">
+          Where your car<br />gets it right.
+        </h1>
+        <a
+          href="#book"
+          className="mt-8 inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-widest text-white/50 transition-colors hover:text-white"
+        >
+          Book Appointment
+          <span className="block h-px w-8 bg-current" />
+        </a>
       </div>
 
-      <a
-        href="#book"
-        className="animate-fade-up absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 rounded-md bg-primary px-7 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition hover:scale-[1.02] sm:inline-flex"
-        style={{ animationDelay: "0.4s" }}
-      >
-        Book Appointment
-      </a>
+      {/* Weather badge — bottom right */}
+      <div className="absolute bottom-8 right-8 z-10 md:bottom-14 md:right-14 lg:bottom-20 lg:right-20">
+        <WeatherBadge />
+      </div>
     </section>
   );
 }

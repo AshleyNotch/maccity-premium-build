@@ -38,18 +38,18 @@ export function WeatherBadge() {
   const { label, Icon } = describe(w?.code ?? 3);
 
   return (
-    <div className="pointer-events-none absolute bottom-6 left-6 z-20 hidden rounded-xl border border-border/40 bg-background/40 px-4 py-3 backdrop-blur-md sm:block">
-      <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+    <div className="pointer-events-none hidden rounded-xl border border-white/20 bg-white/5 px-4 py-3 backdrop-blur-md sm:block">
+      <div className="text-[10px] uppercase tracking-widest text-white/50">
         Dandenong South, VIC
       </div>
       <div className="mt-1 flex items-center gap-3">
-        <div className="text-lg font-semibold leading-none">{label}</div>
-        <div className="flex items-center gap-1.5 text-lg font-semibold leading-none">
+        <div className="text-lg font-semibold leading-none text-white">{label}</div>
+        <div className="flex items-center gap-1.5 text-lg font-semibold leading-none text-white">
           {w ? `${w.temp}°C` : "--°"}
-          <Icon className="h-4 w-4 text-muted-foreground" />
+          <Icon className="h-4 w-4 text-white/50" />
         </div>
       </div>
-      <div className="mt-1 text-[11px] text-muted-foreground">{today}</div>
+      <div className="mt-1 text-[11px] text-white/50">{today}</div>
     </div>
   );
 }
