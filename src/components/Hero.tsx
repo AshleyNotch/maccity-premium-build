@@ -26,12 +26,14 @@ export function Hero() {
         height={1080}
       />
 
-      {/* Subtle dark vignette only — no heavy gradient */}
-      <div className="absolute inset-0 bg-black/55" />
+      {/* Light cinematic overlay — keeps background visible */}
+      <div className="absolute inset-0 bg-black/25" />
+      {/* Bottom vignette for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
       <WeatherBadge />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center translate-y-12">
         <span className="animate-fade-in text-xs font-medium uppercase tracking-[0.3em] text-foreground/80">
           MacCity Auto Workshop
         </span>
