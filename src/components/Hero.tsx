@@ -31,7 +31,7 @@ export function Hero() {
 
       <WeatherBadge />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center translate-y-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 text-center">
         <span className="animate-fade-in text-xs font-medium uppercase tracking-[0.3em] text-foreground/80">
           MacCity Auto Workshop
         </span>
